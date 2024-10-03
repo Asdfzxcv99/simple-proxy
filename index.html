@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Proxy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        iframe {
+            width: 100%;
+            height: 90vh;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Web Proxy</h1>
+    <input type="text" id="urlInput" placeholder="Enter URL" style="width: 80%;">
+    <button id="loadBtn">Load URL</button>
+    <iframe id="proxyFrame"></iframe>
+    <script>
+        const loadBtn = document.getElementById('loadBtn');
+        const urlInput = document.getElementById('urlInput');
+        const proxyFrame = document.getElementById('proxyFrame');
+
+        loadBtn.addEventListener('click', () => {
+            const url = urlInput.value;
+            proxyFrame.src = url;
+        });
+    </script>
+</body>
+</html>
